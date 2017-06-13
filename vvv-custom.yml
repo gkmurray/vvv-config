@@ -1,0 +1,37 @@
+---
+sites:
+  # The wordpress-develop configuration is useful for contributing to WordPress.
+
+  wordpress-develop:
+    repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-develop.git
+    hosts:
+      - src.wordpress-develop.dev
+      - build.wordpress-develop.dev
+
+
+  # The following commented out site configuration will create a standard WordPress
+  # site in www/example-site/ available at http://my-example-site.dev.
+
+  # wordpress-sage:
+  #   repo: https://github.com/gkmurray/custom-site-template.git
+  #   branch: develop
+  #   hosts:
+  #     - sage.wordpress.dev
+  #   custom:
+  #     site_title: Sage
+  #     db_name: wordpress_sage
+
+
+  # The following commented out site configuration will create a environment useful
+  # for contributions to the WordPress meta team:
+  
+  #wordpress-meta-environment:
+  #  repo: https://github.com/WordPress/meta-environment.git
+
+
+utilities:
+  core:
+    - memcached-admin
+    - opcache-status
+    - phpmyadmin
+    - webgrind
