@@ -19,6 +19,8 @@ sites:
   #     - sage.wordpress.dev
   #   custom:
   #     site_title: Sage
+  #     theme_slug: sage
+  #     theme_branch: develop
   #     db_name: wordpress_sage
 
 
