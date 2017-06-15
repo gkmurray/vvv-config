@@ -3,6 +3,7 @@ sites:
   # The wordpress-develop configuration is useful for contributing to WordPress.
 
   wordpress-develop:
+    skip_provisioning: true
     repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-develop.git
     hosts:
       - src.wordpress-develop.dev
@@ -12,16 +13,21 @@ sites:
   # The following commented out site configuration will create a standard WordPress
   # site in www/example-site/ available at http://my-example-site.dev.
 
-  # wordpress-sage:
-  #   repo: https://github.com/gkmurray/custom-site-template.git
-  #   branch: develop
-  #   hosts:
-  #     - sage.wordpress.dev
-  #   custom:
-  #     site_title: Sage
-  #     theme_slug: sage
-  #     theme_branch: develop
-  #     db_name: wordpress_sage
+  # The theme_repo option does not support HTTPS auth. For private repositories make 
+  # sure you have setup your bitbucket SSH account keys, and added them your hosts
+  # ssh-agent before trying to clone the repositories
+
+  sage:
+    repo: https://github.com/gkmurray/custom-site-template.git
+    branch: develop
+    hosts:
+      - sage.wordpress.dev
+    custom:
+      site_title: Sage
+      db_name: wordpress_sage
+      theme_slug: sage
+      theme_repo: https://github.com/gkmurray/sage.git
+      # theme_repo: git@github.com:gkmurray/sage.git
 
 
   # The following commented out site configuration will create a environment useful
