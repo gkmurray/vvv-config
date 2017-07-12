@@ -1,0 +1,1 @@
+config.vm.provision "file", source: "~/.ssh/known_hosts", destination: "~/.ssh/known_hosts"
